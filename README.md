@@ -19,10 +19,11 @@ Add this action to steps.
       with:
         _api_key: ${{ secrets.PGYER_API_TOKEN }} # for example
         appFilePath: /path/to/app_file
-        
-## Release        
 
-    ncc build index.js --license licenses.txt
+## Release
+
+    npm install -g @vercel/ncc
+    npx ncc build index.js --license licenses.txt
     git tag -a -m "release notes" v1.3
     git push --follow-tags
 
